@@ -1,10 +1,10 @@
-// App.tsx
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Counter from './Counter';
 import UserDataForm from './UserDataForm';
 import RichTextEditor from './RichTextEditor';
-// import Counter from './Counter';
+
 
 const App = () => {
   return (
