@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+// App.tsx
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Counter from './Counter';
+import UserDataForm from './UserDataForm';
+import RichTextEditor from './RichTextEditor';
+// import Counter from './Counter';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Counter} />
+        <Route path="/user-data-form" component={UserDataForm} />
+        <Route path="/rich-text-editor" component={RichTextEditor} />
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;
